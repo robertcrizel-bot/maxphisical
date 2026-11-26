@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Phisical Academia | Musculação, Pilates e Dança em São José do Rio Pardo</title>
+    <meta name="description" content="Transformando corpos e mentes através do movimento! Musculação, Studio de Pilates, Aulas de Dança e Espaço Suplementos no Centro de São José do Rio Pardo - SP.">
+    <meta name="theme-color" content="#050E1D">
+
+    <!-- SEO Local: Dados Estruturados JSON-LD (ExerciseGym) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ExerciseGym",
+      "name": "Max Phisical Academia",
+      "description": "Transformando corpos e mentes através do movimento! Musculação, Pilates, Dança e Espaço Suplementos em São José do Rio Pardo.",
+      "url": "https://bio.site/maxphisical",
+      "sameAs": [
+        "https://instagram.com/maxphisical",
+        "https://bio.site/maxphisical"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Cândido Faria, 98 - Centro",
+        "addressLocality": "São José do Rio Pardo",
+        "addressRegion": "SP",
+        "postalCode": "13720-000",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "06:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "06:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "07:00",
+          "closes": "13:30"
+        }
+      ]
+    }
+    </script>
+    <!-- Google Fonts: Montserrat (Headline Larga), Oswald (Display) & Plus Jakarta Sans (UI/Corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Configuração de Design Tokens da Marca Max Phisical -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#050E1D',   /* Azul Marinho Profundo (Fundo Principal) */
+                        carbon: '#0A1931',     /* Azul Marinho Superfície (Cards/Modais) */
+                        graphite: '#162B4D',   /* Azul Aço (Bordas e Divisores) */
+                        volt: '#C8F500',       /* Verde-Limão Elétrico Oficial (Destaque/CTA) */
+                        solar: '#9EE000',      /* Lima Vibrante (Hover/Gradiente) */
+                        navy: '#0F2D5E',       /* Azul Marinho do Logo MAX */
+                        cyanTeam: '#00C2E0',   /* Ciano Sutil (Studio Pilates) */
+                        silver: '#9FB0CC'      /* Cinza Azulado para Leitura Suave */
+                    },
+                    fontFamily: {
+                        hero: ['Montserrat', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'volt-glow': '0 0 28px rgba(200, 245, 0, 0.28)',
+                        'volt-glow-strong': '0 0 42px rgba(200, 245, 0, 0.48)',
+                        'cyan-glow': '0 0 36px rgba(0, 194, 224, 0.22)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* =========================================================
+           ESTILOS CINEMATOGRÁFICOS E MICRO-INTERAÇÕES
+           ========================================================= */
+        :root {
+            color-scheme: dark;
+        }
+
+        body {
+            background-color: #050E1D;
+            color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        /* Granulação Cinematográfica Sutil (Film Grain ~2.5%) */
+        .film-grain {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 40;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Animação Ken Burns Lenta para o Hero */
+        @keyframes kenBurns {
+            0% {
+                transform: scale(1.0) translate(0, 0);
+            }
+            50% {
+                transform: scale(1.09) translate(-1%, -1%);
+            }
+            100% {
+                transform: scale(1.0) translate(0, 0);
+            }
+        }
+        .animate-ken-burns {
+            animation: kenBurns 26s ease-in-out infinite;
+        }
+
+        /* Marquee Infinito */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 28s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism Dark Luxury (Azul Marinho Profundo) */
+        .glass-panel {
+            background: rgba(10, 25, 49, 0.72);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(22, 43, 77, 0.95);
+        }
+
+        /* Filtro Dark Mode para Google Maps */
+        .map-dark-filter {
+            filter: grayscale(85%) invert(92%) contrast(90%) hue-rotate(195deg) saturate(140%);
+        }
+
+        /* Scrollbar Personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050E1D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #162B4D;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C8F500;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-volt selection:text-obsidian">
+
+    <!-- Overlay Sutil de Granulação Cinematográfica -->
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- =========================================================
+         SEÇÃO 1: HEADER MINIMALISTA
+         ========================================================= -->
+    <div id="top-header-wrapper" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <!-- Navbar Principal -->
+        <header id="navbar" class="transition-all duration-300 bg-obsidian/55 backdrop-blur-md border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+                <!-- Logotipo Max Phisical -->
+                <a href="#inicio" class="flex items-center gap-2.5 group focus:outline-none" aria-label="Max Phisical Academia - Início">
+                    <div class="w-8 h-8 rounded-lg bg-volt flex items-center justify-center shadow-volt-glow transition-transform duration-300 group-hover:scale-105">
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-obsidian stroke-[3]"></i>
+                    </div>
+                    <span class="font-hero font-black text-lg sm:text-xl tracking-tight text-white uppercase">
+                        MAX <span class="text-volt">PHISICAL</span>
+                    </span>
+                </a>
+
+                <!-- Links de Navegação Desktop -->
+                <nav class="hidden lg:flex items-center gap-8" aria-label="Navegação Principal">
+                    <a href="#modalidades" class="text-sm font-medium text-silver hover:text-white transition-colors">Modalidades</a>
+                    <a href="#filosofia" class="text-sm font-medium text-silver hover:text-white transition-colors">Filosofia</a>
+                    <a href="#planos" class="text-sm font-medium text-silver hover:text-white transition-colors">Planos</a>
+                    <a href="#horarios" class="text-sm font-medium text-silver hover:text-white transition-colors">Horários</a>
+                    <a href="#localizacao" class="text-sm font-medium text-silver hover:text-white transition-colors">Onde fica</a>
+                </nav>
+
+                <!-- CTA Pílula Desktop & Botão Menu Mobile -->
+                <div class="flex items-center gap-3">
+                    <button
+                        type="button"
+                        onclick="openBookingModal('Musculação')"
+                        class="hidden sm:inline-flex items-center gap-2.5 bg-volt hover:bg-solar text-obsidian font-bold text-xs sm:text-sm pl-5 pr-1.5 py-1.5 rounded-full transition-all duration-300 shadow-volt-glow hover:shadow-volt-glow-strong cursor-pointer"
+                    >
+                        <span>Agendar aula grátis</span>
+                        <span class="w-7 h-7 rounded-full bg-obsidian text-volt flex items-center justify-center">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5 stroke-[2.5]"></i>
+                        </span>
+                    </button>
+
+                    <!-- Botão Hamburger Mobile -->
+                    <button
+                        id="mobile-menu-btn"
+                        type="button"
+                        onclick="toggleMobileMenu()"
+                        class="lg:hidden p-2.5 rounded-xl bg-carbon border border-graphite text-white hover:border-volt hover:text-volt transition-colors"
+                        aria-label="Abrir menu de navegação"
+                    >
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- =========================================================
+         MENU RESPONSIVO MOBILE (DRAWER TELA CHEIA)
+         ========================================================= -->
+    <div id="mobile-drawer" class="fixed inset-0 z-50 bg-obsidian/98 backdrop-blur-xl hidden flex-col justify-between p-6 transition-opacity duration-300">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-volt flex items-center justify-center">
+                    <span class="font-display font-bold text-obsidian text-xl">MP</span>
+                </div>
+                <span class="font-display font-bold text-2xl text-white">MAX <span class="text-volt">PHISICAL</span></span>
+            </div>
+            <button
+                type="button"
+                onclick="toggleMobileMenu()"
+                class="p-3 rounded-xl bg-carbon border border-graphite text-white hover:text-volt"
+                aria-label="Fechar menu"
+            >
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <nav class="flex flex-col gap-6 my-auto text-center">
+            <a href="#modalidades" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Modalidades</a>
+            <a href="#filosofia" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Filosofia</a>
+            <a href="#horarios" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Horários</a>
+            <a href="#planos" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Planos</a>
+            <a href="#comunidade" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Comunidade</a>
+            <a href="#localizacao" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Localização</a>
+        </nav>
+
+        <div class="space-y-4">
+            <button
+                type="button"
+                onclick="toggleMobileMenu(); openBookingModal('Musculação')"
+                class="w-full bg-volt text-obsidian font-bold py-4 rounded-xl text-base flex items-center justify-center gap-2 shadow-volt-glow"
+            >
+                <span>Agendar Aula Experimental</span>
+                <i data-lucide="arrow-up-right" class="w-5 h-5 stroke-[2.5]"></i>
+            </button>
+            <p class="text-center text-xs text-silver">
+                Rua Cândido Faria, 98 - Centro • São José do Rio Pardo
+            </p>
+        </div>
+    </div>
+
+    <main>
+        <!-- =========================================================
+             SEÇÃO 2: HERO SECTION CINEMATOGRÁFICA (LAYOUT SPLIT + CARDS)
+             ========================================================= -->
+        <section id="inicio" class="relative min-h-screen flex flex-col justify-between pt-16 sm:pt-20 overflow-hidden bg-obsidian">
+            <!-- Imagem de Fundo Cinematográfica (Mais Visível e Nítida) -->
+            <div class="absolute inset-0 z-0 overflow-hidden bg-obsidian">
+                <img
+                    id="hero-bg-image"
+                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2070&q=85"
+                    alt="Ambiente de treino na Max Phisical Academia"
+                    class="w-full h-full object-cover object-center lg:object-right animate-ken-burns opacity-95 brightness-105 contrast-105 transition-opacity duration-700"
+                    onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/050E1D/C8F500?text=MAX+PHISICAL+ACADEMIA';"
+                >
+                <!-- Gradiente Direcional Suave: Contraste à esquerda + Fundo bem aberto ao centro e direita -->
+                <div class="absolute inset-0 bg-gradient-to-r from-obsidian/90 via-obsidian/45 lg:via-obsidian/30 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-obsidian/35"></div>
+                <!-- Brilho Atmosférico Sutil Verde-Limão -->
+                <div class="absolute top-1/4 right-1/4 w-[420px] h-[420px] rounded-full bg-volt/12 blur-[130px] pointer-events-none"></div>
+            </div>
+
+            <!-- Área Central do Hero: Esquerda (Copy + CTAs) | Direita (2 Cards Flutuantes) -->
+            <div class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-4 pb-6 lg:pt-6 lg:pb-8 my-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+                    <!-- COLUNA ESQUERDA: Badge, Headline Monumental 2 Linhas, CTAs Pílula e Indicador -->
+                    <div class="lg:col-span-7 reveal visible">
+                        <!-- Badge Pílula Discreto -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-volt/10 border border-volt/35 mb-4">
+                            <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-volt">
+                                Academia no Centro • SJRP
+                            </span>
+                        </div>
+
+                        <!-- Headline Larga em 2 Linhas -->
+                        <h1 class="font-hero font-black text-4xl sm:text-6xl lg:text-[4.35rem] uppercase leading-[1.0] tracking-tight mb-5">
+                            <span class="block text-white">TREINE FORTE.</span>
+                            <span class="block text-volt mt-1">VÁ ALÉM.</span>
+                        </h1>
+
+                        <!-- Subheadline Direta -->
+                        <p class="text-base sm:text-lg text-silver max-w-xl leading-relaxed mb-7">
+                            Musculação, Pilates e Dança com acompanhamento de professores. Nunca treinou?
+                            <span class="text-white font-medium">Sua primeira aula é por nossa conta.</span>
+                        </p>
+
+                        <!-- Botões Pílula (Primário Volt + Secundário Glass) -->
+                        <div class="flex flex-wrap items-center gap-3.5 mb-5">
+                            <button
+                                type="button"
+                                onclick="openBookingModal('Musculação')"
+                                class="inline-flex items-center gap-3 bg-volt hover:bg-solar text-obsidian font-extrabold text-sm sm:text-base pl-6 pr-2 py-2 rounded-full transition-all duration-300 shadow-volt-glow hover:shadow-volt-glow-strong hover:-translate-y-0.5 cursor-pointer"
+                            >
+                                <span>Agendar aula grátis</span>
+                                <span class="w-9 h-9 rounded-full bg-obsidian text-volt flex items-center justify-center">
+                                    <i data-lucide="message-circle" class="w-4 h-4 stroke-[2.5]"></i>
+                                </span>
+                            </button>
+
+                            <a
+                                href="#planos"
+                                class="inline-flex items-center gap-2.5 bg-carbon/75 hover:bg-carbon border border-graphite hover:border-volt/50 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full backdrop-blur-md transition-all duration-300"
+                            >
+                                <span>Ver planos</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 text-volt"></i>
+                            </a>
+                        </div>
+
+                        <!-- Micro-texto Informativo -->
+                        <p class="text-xs text-silver/80 max-w-md leading-relaxed mb-8">
+                            1 aula experimental por pessoa, com acompanhamento de professor. Traga documento com foto e roupa de treino.
+                        </p>
+
+                        <!-- Controles de Slide Minimalistas (Igual à Referência) -->
+                        <div class="flex items-center gap-3">
+                            <div id="hero-slide-dots" class="flex items-center gap-2" role="tablist" aria-label="Selecionar foto de fundo">
+                                <button type="button" onclick="setHeroSlide(0)" class="hero-dot h-1 w-8 rounded-full bg-volt transition-all cursor-pointer" aria-label="Slide 1: Musculação"></button>
+                                <button type="button" onclick="setHeroSlide(1)" class="hero-dot h-1 w-5 rounded-full bg-white/25 hover:bg-white/50 transition-all cursor-pointer" aria-label="Slide 2: Treino"></button>
+                                <button type="button" onclick="setHeroSlide(2)" class="hero-dot h-1 w-5 rounded-full bg-white/25 hover:bg-white/50 transition-all cursor-pointer" aria-label="Slide 3: Pilates"></button>
+                                <button type="button" onclick="setHeroSlide(3)" class="hero-dot h-1 w-5 rounded-full bg-white/25 hover:bg-white/50 transition-all cursor-pointer" aria-label="Slide 4: Dança"></button>
+                            </div>
+                            <button
+                                id="hero-pause-btn"
+                                type="button"
+                                onclick="toggleHeroAutoplay()"
+                                class="w-7 h-7 rounded-full bg-carbon/80 border border-graphite flex items-center justify-center text-silver hover:text-volt hover:border-volt/60 transition-colors cursor-pointer"
+                                aria-label="Pausar ou retomar slides"
+                            >
+                                <i id="hero-pause-icon" data-lucide="pause" class="w-3 h-3"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- COLUNA DIREITA: 2 Cards Flutuantes em Glassmorphism -->
+                    <div class="lg:col-span-5 relative flex flex-col gap-4 lg:min-h-[320px] justify-center reveal visible">
+                        <!-- Card Flutuante 1: Status em Tempo Real (Topo Direito) -->
+                        <div class="lg:self-end w-full sm:w-72 rounded-2xl p-5 bg-carbon/70 backdrop-blur-xl border border-white/10 shadow-2xl">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2 text-xs text-silver">
+                                    <i data-lucide="clock" class="w-3.5 h-3.5 text-volt"></i>
+                                    <span id="hero-status-label" class="font-semibold text-white">Verificando...</span>
+                                </div>
+                                <span id="hero-status-dot-wrapper" class="relative flex h-2.5 w-2.5">
+                                    <span id="hero-status-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-volt opacity-75"></span>
+                                    <span id="hero-status-dot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-volt"></span>
+                                </span>
+                            </div>
+
+                            <p id="hero-status-eyebrow" class="text-[10px] font-bold uppercase tracking-[0.18em] text-silver mb-1">
+                                HOJE ATÉ AS
+                            </p>
+                            <p id="hero-status-hour" class="font-hero font-extrabold text-3xl text-white tracking-tight mb-4">
+                                21h
+                            </p>
+
+                            <!-- Barra de Progresso do Expediente -->
+                            <div class="w-full h-1 rounded-full bg-white/10 relative mb-2">
+                                <div id="hero-status-bar" class="h-full rounded-full bg-volt relative transition-all duration-700" style="width: 45%;">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-volt shadow-volt-glow absolute -right-1 top-1/2 -translate-y-1/2"></span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-[11px] text-silver">
+                                <span id="hero-status-detail">06h às 21h</span>
+                                <span id="hero-status-percent" class="text-white/80 font-medium">--%</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Flutuante 2: Próxima Aula / Destaque (Base Centro-Direita) -->
+                        <div class="lg:self-start lg:ml-4 w-full sm:w-64 rounded-2xl p-5 bg-carbon/75 backdrop-blur-xl border border-white/10 shadow-2xl">
+                            <div class="flex items-center gap-2 text-xs text-silver mb-3">
+                                <i data-lucide="calendar" class="w-3.5 h-3.5 text-volt"></i>
+                                <span class="font-medium text-white/90">Próxima aula</span>
+                            </div>
+                            <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-volt mb-1">
+                                TURMA DA NOITE
+                            </p>
+                            <p class="font-hero font-extrabold text-3xl text-white tracking-tight leading-none mb-1.5">
+                                19h
+                            </p>
+                            <p class="text-xs text-silver">
+                                Aula de Dança • Max Phisical
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAIXA INFERIOR DE 4 BLOCOS (INFO STRIP INTEGRADA AO HERO) -->
+            <div class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-6">
+                <div class="rounded-2xl bg-carbon/85 backdrop-blur-xl border border-graphite/90 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-graphite/80 overflow-hidden shadow-2xl">
+                    <!-- Bloco 1: Localização -->
+                    <a href="#localizacao" class="group p-5 sm:p-6 hover:bg-navy/35 transition-colors flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-volt"></i>
+                            <span class="text-[11px] font-medium text-silver group-hover:text-volt transition-colors inline-flex items-center gap-1">
+                                Como chegar <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="font-hero font-extrabold text-2xl sm:text-[1.65rem] text-white tracking-tight">Centro</p>
+                            <p class="text-xs text-silver mt-1">Rua Cândido Faria, 98 • SJRP</p>
+                        </div>
+                    </a>
+
+                    <!-- Bloco 2: Modalidades -->
+                    <a href="#modalidades" class="group p-5 sm:p-6 hover:bg-navy/35 transition-colors flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-silver">
+                                <i data-lucide="dumbbell" class="w-3.5 h-3.5 text-volt"></i> Modalidades
+                            </span>
+                            <span class="text-[11px] font-medium text-silver group-hover:text-volt transition-colors inline-flex items-center gap-1">
+                                Explorar <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="font-hero font-extrabold text-2xl sm:text-[1.65rem] text-white tracking-tight">3 Frentes</p>
+                            <p class="text-xs text-silver mt-1">Musculação, Pilates e Dança</p>
+                        </div>
+                    </a>
+
+                    <!-- Bloco 3: Horários -->
+                    <a href="#horarios" class="group p-5 sm:p-6 hover:bg-navy/35 transition-colors flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-silver">
+                                <i data-lucide="clock" class="w-3.5 h-3.5 text-volt"></i> Seg a Qui
+                            </span>
+                            <span class="text-[11px] font-medium text-silver group-hover:text-volt transition-colors inline-flex items-center gap-1">
+                                Ver grade <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="font-hero font-extrabold text-2xl sm:text-[1.65rem] text-white tracking-tight">06h–21h</p>
+                            <p class="text-xs text-silver mt-1">Sex até 20h • Sáb 07h às 13h30</p>
+                        </div>
+                    </a>
+
+                    <!-- Bloco 4: Comunidade -->
+                    <a href="https://instagram.com/maxphisical" target="_blank" rel="noopener noreferrer" class="group p-5 sm:p-6 hover:bg-navy/35 transition-colors flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-silver">
+                                <i data-lucide="instagram" class="w-3.5 h-3.5 text-volt"></i> Comunidade
+                            </span>
+                            <span class="text-[11px] font-medium text-silver group-hover:text-volt transition-colors inline-flex items-center gap-1">
+                                @maxphisical <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <p class="font-hero font-extrabold text-2xl sm:text-[1.65rem] text-white tracking-tight">+1.1k</p>
+                            <p class="text-xs text-silver mt-1">alunos e seguidores no Instagram</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SEÇÃO 9: CTA FINAL IMERSIVO + LOCALIZAÇÃO OFICIAL
+             ========================================================= -->
+        <section id="localizacao" class="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-graphite/60 overflow-hidden">
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-volt/10 blur-[150px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto">
+                <!-- Banner CTA Final -->
+                <div class="rounded-3xl bg-gradient-to-br from-carbon via-obsidian to-navy/40 border border-graphite p-8 sm:p-12 lg:p-16 mb-14 reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                        <div class="lg:col-span-7">
+                            <span class="text-xs font-bold uppercase tracking-[0.25em] text-volt block mb-3">
+                                Comece Agora
+                            </span>
+                            <h2 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl uppercase leading-[1.0] text-white mb-5">
+                                O corpo que você quer exige <span class="text-volt">atitude hoje.</span>
+                            </h2>
+                            <p class="text-silver text-base max-w-xl leading-relaxed">
+                                Preencha seus dados rápidos ao lado e venha fazer uma aula experimental na Max Phisical. Nossa equipe entrará em contato ou você pode falar direto pelo nosso canal oficial.
+                            </p>
+                        </div>
+
+                        <!-- Formulário Rápido de Agendamento -->
+                        <div class="lg:col-span-5">
+                            <form id="inline-booking-form" onsubmit="handleBookingSubmit(event, 'inline')" class="space-y-4 bg-obsidian/80 p-6 sm:p-7 rounded-2xl border border-graphite">
+                                <div>
+                                    <label for="inline-name" class="block text-xs font-semibold uppercase tracking-wider text-silver mb-1.5">Seu Nome</label>
+                                    <input
+                                        type="text"
+                                        id="inline-name"
+                                        required
+                                        placeholder="Ex: João Silva"
+                                        class="w-full px-4 py-3 rounded-xl bg-carbon border border-graphite text-white placeholder-silver/50 focus:outline-none focus:border-volt text-sm"
+                                    >
+                                </div>
+                                <div>
+                                    <label for="inline-phone" class="block text-xs font-semibold uppercase tracking-wider text-silver mb-1.5">WhatsApp</label>
+                                    <input
+                                        type="tel"
+                                        id="inline-phone"
+                                        required
+                                        placeholder="(19) 99999-9999"
+                                        class="w-full px-4 py-3 rounded-xl bg-carbon border border-graphite text-white placeholder-silver/50 focus:outline-none focus:border-volt text-sm"
+                                    >
+                                </div>
+                                <div>
+                                    <label for="inline-modality" class="block text-xs font-semibold uppercase tracking-wider text-silver mb-1.5">Modalidade de Interesse</label>
+                                    <select
+                                        id="inline-modality"
+                                        class="w-full px-4 py-3 rounded-xl bg-carbon border border-graphite text-white focus:outline-none focus:border-volt text-sm"
+                                    >
+                                        <option value="Musculação">Musculação</option>
+                                        <option value="Studio Pilates">Studio Pilates</option>
+                                        <option value="Aulas de Dança">Aulas de Dança</option>
+                                        <option value="Plano Completo / Combo">Plano Completo / Combo</option>
+                                        <option value="Espaço Suplementos">Espaço Suplementos</option>
+                                    </select>
+                                </div>
+                                <button
+                                    type="submit"
+                                    class="w-full bg-volt hover:bg-solar text-obsidian font-extrabold text-sm uppercase tracking-wider py-4 rounded-xl transition-all shadow-volt-glow hover:shadow-volt-glow-strong flex items-center justify-center gap-2 cursor-pointer"
+                                >
+                                    <span>Agendar Aula Experimental</span>
+                                    <i data-lucide="arrow-up-right" class="w-4 h-4 stroke-[2.5]"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloco de Localização Oficial -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch reveal">
+                    <div class="lg:col-span-5 rounded-3xl bg-carbon border border-graphite p-8 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-[0.25em] text-volt block mb-3">
+                                06 / Onde Estamos
+                            </span>
+                            <h3 class="font-display font-bold text-3xl uppercase text-white mb-6">
+                                No coração de São José do Rio Pardo
+                            </h3>
+
+                            <div class="space-y-5 text-sm">
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-obsidian border border-graphite flex items-center justify-center shrink-0">
+                                        <i data-lucide="map-pin" class="w-5 h-5 text-volt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-white">Endereço Oficial</p>
+                                        <p class="text-silver mt-0.5">Rua Cândido Faria, 98 - Centro<br>São José do Rio Pardo - SP, CEP 13720-000</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-obsidian border border-graphite flex items-center justify-center shrink-0">
+                                        <i data-lucide="clock" class="w-5 h-5 text-volt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-white">Horários</p>
+                                        <p class="text-silver mt-0.5">Seg–Qui: 06h às 21h • Sex: 06h às 20h<br>Sáb: 07h às 13h30 • Dom: Fechado</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-obsidian border border-graphite flex items-center justify-center shrink-0">
+                                        <i data-lucide="link" class="w-5 h-5 text-volt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-white">Canais Oficiais</p>
+                                        <div class="flex flex-wrap gap-3 mt-1">
+                                            <a href="https://bio.site/maxphisical" target="_blank" rel="noopener noreferrer" class="text-volt hover:underline font-semibold">bio.site/maxphisical</a>
+                                            <span class="text-graphite">|</span>
+                                            <a href="https://instagram.com/maxphisical" target="_blank" rel="noopener noreferrer" class="text-silver hover:text-white">@maxphisical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-graphite">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Rua+Candido+Faria,+98+-+Centro,+Sao+Jose+do+Rio+Pardo+-+SP,+13720-000"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-full inline-flex items-center justify-center gap-2.5 bg-obsidian hover:bg-volt text-white hover:text-obsidian border border-graphite hover:border-volt font-bold text-sm uppercase tracking-wider py-4 rounded-xl transition-all duration-300"
+                            >
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Como Chegar (Google Maps)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mapa Google Maps Incorporado com Filtro Escuro -->
+                    <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-graphite bg-carbon min-h-[360px] relative">
+                        <iframe
+                            title="Mapa da Max Phisical Academia em São José do Rio Pardo"
+                            src="https://maps.google.com/maps?q=Rua%20Candido%20Faria,%2098,%20Centro,%20Sao%20Jose%20do%20Rio%20Pardo,%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                            class="w-full h-full min-h-[360px] border-0 map-dark-filter"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+         SEÇÃO 10: FOOTER PREMIUM
+         ========================================================= -->
+    <footer class="bg-obsidian border-t border-graphite pt-16 pb-10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-graphite">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-volt flex items-center justify-center">
+                            <span class="font-display font-bold text-obsidian text-xl">MP</span>
+                        </div>
+                        <span class="font-display font-bold text-2xl text-white">MAX <span class="text-volt">PHISICAL</span></span>
+                    </div>
+                    <p class="text-silver text-sm max-w-sm leading-relaxed mb-5">
+                        Transformando corpos e mentes através do movimento! Musculação, Pilates, Dança e Espaço Suplementos no Centro de São José do Rio Pardo.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://instagram.com/maxphisical" target="_blank" rel="noopener noreferrer" aria-label="Instagram Max Phisical" class="p-2.5 rounded-xl bg-carbon border border-graphite text-silver hover:text-volt hover:border-volt transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://bio.site/maxphisical" target="_blank" rel="noopener noreferrer" aria-label="Link Oficial Max Phisical" class="p-2.5 rounded-xl bg-carbon border border-graphite text-silver hover:text-volt hover:border-volt transition-colors">
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4 class="font-display uppercase text-sm tracking-widest text-white mb-4">Navegação</h4>
+                    <ul class="space-y-2.5 text-sm text-silver">
+                        <li><a href="#modalidades" class="hover:text-volt transition-colors">Modalidades</a></li>
+                        <li><a href="#filosofia" class="hover:text-volt transition-colors">Nossa Filosofia</a></li>
+                        <li><a href="#horarios" class="hover:text-volt transition-colors">Horários</a></li>
+                        <li><a href="#planos" class="hover:text-volt transition-colors">Planos e Matrícula</a></li>
+                        <li><a href="#localizacao" class="hover:text-volt transition-colors">Localização</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4">
+                    <h4 class="font-display uppercase text-sm tracking-widest text-white mb-4">Unidade Centro</h4>
+                    <p class="text-sm text-silver leading-relaxed mb-3">
+                        Rua Cândido Faria, 98 - Centro<br>
+                        São José do Rio Pardo - SP • 13720-000
+                    </p>
+                    <p class="text-xs text-silver/80">
+                        Seg–Qui: 06h–21h | Sex: 06h–20h | Sáb: 07h–13h30
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-silver">
+                <p>© <span id="current-year"></span> Max Phisical Academia. Todos os direitos reservados.</p>
+                <a href="#inicio" class="inline-flex items-center gap-2 text-silver hover:text-volt transition-colors uppercase tracking-wider font-semibold">
+                    <span>Voltar ao topo</span>
+                    <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         BOTÃO FLUTUANTE DE CONTATO (RF04)
+         ========================================================= -->
+    <a
+        href="https://bio.site/maxphisical"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-5 right-5 z-40 flex items-center gap-2.5 bg-volt hover:bg-solar text-obsidian font-extrabold text-xs sm:text-sm uppercase tracking-wider px-4 py-3.5 rounded-full shadow-volt-glow hover:shadow-volt-glow-strong transition-all hover:-translate-y-0.5"
+        aria-label="Falar com a Max Phisical"
+    >
+        <i data-lucide="message-circle" class="w-5 h-5 stroke-[2.5]"></i>
+        <span class="hidden sm:inline">Fale Conosco</span>
+    </a>
+
+    <!-- =========================================================
+         MODAL DE AGENDAMENTO DE AULA EXPERIMENTAL (RF03)
+         ========================================================= -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-obsidian/85 backdrop-blur-md">
+        <div class="relative w-full max-w-md rounded-3xl bg-carbon border border-graphite p-7 sm:p-8 shadow-2xl">
+            <button
+                type="button"
+                onclick="closeBookingModal()"
+                class="absolute top-5 right-5 p-2 rounded-xl bg-obsidian border border-graphite text-silver hover:text-volt transition-colors cursor-pointer"
+                aria-label="Fechar janela de agendamento"
+            >
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <span class="text-xs font-bold uppercase tracking-[0.22em] text-volt block mb-2">Max Phisical Academia</span>
+            <h3 class="font-display font-bold text-3xl uppercase text-white mb-2">Agendar Aula Experimental</h3>
+            <p class="text-sm text-silver mb-6">
+                Informe seus dados para direcionarmos seu atendimento ao nosso canal oficial.
+            </p>
+
+            <form id="modal-booking-form" onsubmit="handleBookingSubmit(event, 'modal')" class="space-y-4">
+                <div>
+                    <label for="modal-name" class="block text-xs font-semibold uppercase tracking-wider text-silver mb-1.5">Nome Completo</label>
+                    <input
+                        type="text"
+                        id="modal-name"
+                        required
+                        placeholder="Como podemos te chamar?"
+                        class="w-full px-4 py-3 rounded-xl bg-obsidian border border-graphite text-white placeholder-silver/50 focus:outline-none focus:border-volt text-sm"
+                    >
+                </div>
+                <div>
+                    <label for="modal-phone" class="block text-xs font-semibold uppercase tracking-wider text-silver mb-1.5">WhatsApp</label>
+                    <input
+                        type="tel"
+                        id="modal-phone"
+                        required
+                        placeholder="(19) 99999-9999"
+                        class="w-full px-4 py-3 rounded-xl bg-obsidian border border-graphite text-white placeholder-silver/50 focus:outline-none focus:border-volt text-sm"
+                    >
+                </div>
+                <div>
+                    <label for="modal-modality" class="block text-xs font-semibold uppercase tracking-wider text-silver mb-1.5">Modalidade</label>
+                    <select
+                        id="modal-modality"
+                        class="w-full px-4 py-3 rounded-xl bg-obsidian border border-graphite text-white focus:outline-none focus:border-volt text-sm"
+                    >
+                        <option value="Musculação">Musculação</option>
+                        <option value="Pilates">Studio Pilates</option>
+                        <option value="Dança">Aulas de Dança</option>
+                        <option value="Plano Musculação">Plano Musculação</option>
+                        <option value="Plano Completo / Combo">Plano Completo / Combo</option>
+                        <option value="Studio Pilates">Avaliação Studio Pilates</option>
+                        <option value="Suplementos / Consultoria">Espaço Suplementos</option>
+                    </select>
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-volt hover:bg-solar text-obsidian font-extrabold text-sm uppercase tracking-wider py-4 rounded-xl transition-all shadow-volt-glow hover:shadow-volt-glow-strong flex items-center justify-center gap-2 mt-2 cursor-pointer"
+                >
+                    <span>Continuar para Atendimento</span>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 stroke-[2.5]"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         TOAST DE FEEDBACK (SUBSTITUI ALERT)
+         ========================================================= -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden items-center gap-3 px-6 py-4 rounded-2xl bg-carbon border border-volt text-white shadow-volt-glow max-w-md w-[92%]">
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-volt shrink-0"></i>
+        <div class="text-sm">
+            <p id="toast-title" class="font-bold text-white">Pré-agendamento pronto!</p>
+            <p id="toast-message" class="text-xs text-silver mt-0.5"></p>
+        </div>
+        <a href="https://bio.site/maxphisical" target="_blank" rel="noopener noreferrer" class="ml-auto px-3 py-1.5 rounded-lg bg-volt text-obsidian font-bold text-xs uppercase shrink-0">
+            Abrir Bio
+        </a>
+    </div>
+
+    <!-- =========================================================
+         SCRIPTS: STATUS EM TEMPO REAL, ABAS, ANIMAÇÕES E MODAL
+         ========================================================= -->
+    <script>
+        /**
+         * Inicialização geral após carregamento do DOM
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            // Renderizar ícones Lucide
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+
+            // Ano dinâmico no Footer
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // Atualizar status de funcionamento em tempo real (Fuso de Brasília)
+            updateGymOpenStatus();
+            setInterval(updateGymOpenStatus, 60000);
+
+            // Inicializar aba padrão da grade de modalidades
+            selectScheduleTab('musculacao');
+
+            // Configurar Scroll Reveal com IntersectionObserver
+            initScrollReveal();
+
+            // Configurar efeito de consolidação da Navbar ao rolar
+            initNavbarScroll();
+
+            // Iniciar carrossel sutil de imagens do Hero
+            startHeroAutoplay();
+        });
+
+        /**
+         * Carrossel de Fundo do Hero (4 Slides com Pausa/Play)
+         */
+        const heroSlides = [
+            'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2070&q=85',
+            'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=2070&q=85',
+            'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=2070&q=85',
+            'https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=2070&q=85'
+        ];
+        let currentHeroSlide = 0;
+        let heroAutoplayTimer = null;
+        let isHeroAutoplayActive = true;
+
+        function setHeroSlide(index) {
+            currentHeroSlide = index % heroSlides.length;
+            const img = document.getElementById('hero-bg-image');
+            if (img) {
+                img.style.opacity = '0.4';
+                setTimeout(() => {
+                    img.src = heroSlides[currentHeroSlide];
+                    img.style.opacity = '0.95';
+                }, 220);
+            }
+            document.querySelectorAll('.hero-dot').forEach((dot, idx) => {
+                if (idx === currentHeroSlide) {
+                    dot.className = 'hero-dot h-1 w-8 rounded-full bg-volt transition-all cursor-pointer';
+                } else {
+                    dot.className = 'hero-dot h-1 w-5 rounded-full bg-white/25 hover:bg-white/50 transition-all cursor-pointer';
+                }
+            });
+        }
+
+        function startHeroAutoplay() {
+            clearInterval(heroAutoplayTimer);
+            heroAutoplayTimer = setInterval(() => {
+                if (isHeroAutoplayActive) {
+                    setHeroSlide((currentHeroSlide + 1) % heroSlides.length);
+                }
+            }, 6500);
+        }
+
+        function toggleHeroAutoplay() {
+            isHeroAutoplayActive = !isHeroAutoplayActive;
+            const icon = document.getElementById('hero-pause-icon');
+            if (icon) {
+                icon.setAttribute('data-lucide', isHeroAutoplayActive ? 'pause' : 'play');
+                if (window.lucide) lucide.createIcons();
+            }
+        }
+
+        /**
+         * RF02 — Indicador Dinâmico de Funcionamento (Horário de Brasília)
+         * Grade oficial:
+         * Seg a Qui (1-4): 06:00 às 21:00
+         * Sex (5):         06:00 às 20:00
+         * Sáb (6):         07:00 às 13:30
+         * Dom (0):         Fechado
+         */
+        function updateGymOpenStatus() {
+            try {
+                const now = new Date();
+                // Converter para fuso America/Sao_Paulo
+                const brString = now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' });
+                const brDate = new Date(brString);
+
+                const day = brDate.getDay(); // 0=Dom, 1=Seg ... 6=Sab
+                const minutesNow = brDate.getHours() * 60 + brDate.getMinutes();
+
+                let isOpen = false;
+                let detailText = '';
+                let eyebrowText = '';
+                let bigHourText = '';
+                let progressPercent = 0;
+
+                if (day >= 1 && day <= 4) {
+                    // Segunda a Quinta: 06:00 (360) às 21:00 (1260)
+                    isOpen = minutesNow >= 360 && minutesNow < 1260;
+                    detailText = '06h às 21h';
+                    if (isOpen) {
+                        eyebrowText = 'FECHA HOJE ÀS';
+                        bigHourText = '21h';
+                        progressPercent = Math.round(((minutesNow - 360) / (1260 - 360)) * 100);
+                    } else if (minutesNow < 360) {
+                        eyebrowText = 'ABRE HOJE ÀS';
+                        bigHourText = '6h';
+                        progressPercent = 12;
+                    } else {
+                        eyebrowText = 'ABRE AMANHÃ ÀS';
+                        bigHourText = '6h';
+                        progressPercent = 100;
+                    }
+                } else if (day === 5) {
+                    // Sexta: 06:00 (360) às 20:00 (1200)
+                    isOpen = minutesNow >= 360 && minutesNow < 1200;
+                    detailText = '06h às 20h';
+                    if (isOpen) {
+                        eyebrowText = 'FECHA HOJE ÀS';
+                        bigHourText = '20h';
+                        progressPercent = Math.round(((minutesNow - 360) / (1200 - 360)) * 100);
+                    } else if (minutesNow < 360) {
+                        eyebrowText = 'ABRE HOJE ÀS';
+                        bigHourText = '6h';
+                        progressPercent = 12;
+                    } else {
+                        eyebrowText = 'ABRE AMANHÃ ÀS';
+                        bigHourText = '7h';
+                        progressPercent = 100;
+                    }
+                } else if (day === 6) {
+                    // Sábado: 07:00 (420) às 13:30 (810)
+                    isOpen = minutesNow >= 420 && minutesNow < 810;
+                    detailText = '07h às 13h30';
+                    if (isOpen) {
+                        eyebrowText = 'FECHA HOJE ÀS';
+                        bigHourText = '13h30';
+                        progressPercent = Math.round(((minutesNow - 420) / (810 - 420)) * 100);
+                    } else if (minutesNow < 420) {
+                        eyebrowText = 'ABRE HOJE ÀS';
+                        bigHourText = '7h';
+                        progressPercent = 15;
+                    } else {
+                        eyebrowText = 'ABRE SEGUNDA ÀS';
+                        bigHourText = '6h';
+                        progressPercent = 100;
+                    }
+                } else {
+                    // Domingo: Fechado
+                    isOpen = false;
+                    detailText = 'Domingo: Fechado';
+                    eyebrowText = 'ABRE AMANHÃ ÀS';
+                    bigHourText = '6h';
+                    progressPercent = 10;
+                }
+
+                // Elementos do Card Flutuante do Hero
+                const heroLabel = document.getElementById('hero-status-label');
+                const heroEyebrow = document.getElementById('hero-status-eyebrow');
+                const heroHour = document.getElementById('hero-status-hour');
+                const heroDetail = document.getElementById('hero-status-detail');
+                const heroBar = document.getElementById('hero-status-bar');
+                const heroPercent = document.getElementById('hero-status-percent');
+                const heroDot = document.getElementById('hero-status-dot');
+                const heroPing = document.getElementById('hero-status-ping');
+
+                // Elementos da Seção Horários
+                const schedText = document.getElementById('schedule-status-text');
+                const schedSub = document.getElementById('schedule-status-sub');
+                const schedDot = document.getElementById('schedule-status-dot');
+
+                if (heroEyebrow) heroEyebrow.textContent = eyebrowText;
+                if (heroHour) heroHour.textContent = bigHourText;
+                if (heroDetail) heroDetail.textContent = detailText;
+                if (heroBar) heroBar.style.width = `${Math.max(8, Math.min(100, progressPercent))}%`;
+                if (heroPercent) heroPercent.textContent = `${progressPercent}%`;
+
+                if (isOpen) {
+                    if (heroLabel) {
+                        heroLabel.textContent = 'Aberto agora';
+                        heroLabel.className = 'font-semibold text-volt';
+                    }
+                    if (heroDot) heroDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-volt';
+                    if (heroPing) heroPing.classList.remove('hidden');
+
+                    if (schedText) {
+                        schedText.textContent = 'Aberto agora';
+                        schedText.className = 'text-xs font-bold uppercase tracking-wider text-volt';
+                    }
+                    if (schedSub) schedSub.textContent = detailText;
+                    if (schedDot) schedDot.className = 'w-3 h-3 rounded-full bg-volt animate-pulse';
+                } else {
+                    if (heroLabel) {
+                        heroLabel.textContent = 'Fechado';
+                        heroLabel.className = 'font-semibold text-silver';
+                    }
+                    if (heroDot) heroDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-silver/60';
+                    if (heroPing) heroPing.classList.add('hidden');
+
+                    if (schedText) {
+                        schedText.textContent = 'Fechado no momento';
+                        schedText.className = 'text-xs font-bold uppercase tracking-wider text-silver';
+                    }
+                    if (schedSub) schedSub.textContent = `${eyebrowText} ${bigHourText}`;
+                    if (schedDot) schedDot.className = 'w-3 h-3 rounded-full bg-silver/50';
+                }
+            } catch (error) {
+                console.error('Erro ao calcular status de funcionamento:', error);
+            }
+        }
+
+        /**
+         * Micro-bloco Interativo: Mitos vs. Verdades do Pilates
+         */
+        const pilatesMyths = [
+            {
+                myth: 'Mito: "Pilates é só alongamento leve."',
+                truth: 'Verdade: Trabalha força profunda do core, estabilização articular, controle respiratório e resistência muscular intensa.'
+            },
+            {
+                myth: 'Mito: "Preciso já ter flexibilidade para começar."',
+                truth: 'Verdade: A flexibilidade é um resultado da prática contínua, não um pré-requisito. Os exercícios se adaptam ao seu nível.'
+            },
+            {
+                myth: 'Mito: "Pilates é apenas para reabilitação."',
+                truth: 'Verdade: Atletas e praticantes de musculação usam o Pilates para prevenir lesões, melhorar postura e ganhar performance.'
+            }
+        ];
+        let currentMythIndex = 0;
+
+        function nextPilatesMyth() {
+            currentMythIndex = (currentMythIndex + 1) % pilatesMyths.length;
+            const titleEl = document.getElementById('pilates-myth-title');
+            const truthEl = document.getElementById('pilates-myth-truth');
+            if (titleEl && truthEl) {
+                titleEl.textContent = pilatesMyths[currentMythIndex].myth;
+                truthEl.textContent = pilatesMyths[currentMythIndex].truth;
+            }
+        }
+
+        /**
+         * Filtro Interativo de Modalidades na Seção de Horários
+         */
+        const scheduleData = {
+            musculacao: {
+                tag: 'Acesso Livre Diário',
+                title: 'Musculação com Professores em Tempo Integral',
+                desc: 'Treine no horário que melhor se encaixa na sua rotina: Segunda a Quinta das 06h às 21h, Sexta das 06h às 20h e Sábado das 07h às 13h30.',
+                highlights: [
+                    'Sem necessidade de agendar horário após a matrícula',
+                    'Acompanhamento de ficha e correção postural',
+                    'Espaço climatizado e equipamentos completos'
+                ],
+                ctaLabel: 'Agendar Treino Experimental',
+                modality: 'Musculação'
+            },
+            pilates: {
+                tag: 'Turmas Reduzidas',
+                title: 'Studio de Pilates com Horários Agendados',
+                desc: 'Sessões personalizadas de 1x a 3x por semana com atenção individualizada. Consulte a disponibilidade de horários na manhã, tarde ou noite.',
+                highlights: [
+                    'Avaliação inicial para entender seus objetivos',
+                    'Foco em coluna, core, flexibilidade e prevenção',
+                    'Ambiente tranquilo e equipamentos modernos'
+                ],
+                ctaLabel: 'Consultar Horários de Pilates',
+                modality: 'Pilates'
+            },
+            danca: {
+                tag: 'Destaque às 19h',
+                title: 'Aulas de Dança & Aulões Especiais',
+                desc: 'Turmas energizantes no período noturno (com destaque para as aulas às 19h) e eventos especiais abertos à comunidade divulgados no @maxphisical.',
+                highlights: [
+                    'Alto gasto calórico com diversão garantida',
+                    'Coreografias acessíveis para todos os níveis',
+                    'Clima acolhedor e comunidade vibrante'
+                ],
+                ctaLabel: 'Reservar Vaga na Dança',
+                modality: 'Dança'
+            }
+        };
+
+        function selectScheduleTab(key) {
+            const data = scheduleData[key];
+            if (!data) return;
+
+            // Atualizar visual dos botões
+            document.querySelectorAll('.schedule-tab').forEach(btn => {
+                btn.className = 'schedule-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider bg-carbon text-silver border border-graphite hover:text-white transition-all cursor-pointer';
+            });
+            const activeBtn = document.getElementById(`tab-${key}`);
+            if (activeBtn) {
+                activeBtn.className = 'schedule-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider bg-volt text-obsidian transition-all cursor-pointer';
+            }
+
+            // Atualizar conteúdo
+            const container = document.getElementById('schedule-tab-content');
+            if (!container) return;
+
+            const highlightsHtml = data.highlights.map(item => `
+                <li class="flex items-center gap-2.5 text-sm text-white/90">
+                    <span class="w-1.5 h-1.5 rounded-full bg-volt shrink-0"></span>
+                    <span>${item}</span>
+                </li>
+            `).join('');
+
+            container.innerHTML = `
+                <div class="lg:col-span-8">
+                    <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-volt mb-2">${data.tag}</span>
+                    <h4 class="font-display font-bold text-2xl sm:text-3xl uppercase text-white mb-3">${data.title}</h4>
+                    <p class="text-silver text-sm sm:text-base leading-relaxed mb-5">${data.desc}</p>
+                    <ul class="space-y-2.5">${highlightsHtml}</ul>
+                </div>
+                <div class="lg:col-span-4 flex lg:justify-end">
+                    <button
+                        type="button"
+                        onclick="openBookingModal('${data.modality}')"
+                        class="w-full lg:w-auto inline-flex items-center justify-center gap-2.5 bg-volt hover:bg-solar text-obsidian font-extrabold text-sm uppercase tracking-wider px-7 py-4 rounded-xl transition-all shadow-volt-glow hover:shadow-volt-glow-strong cursor-pointer"
+                    >
+                        <span>${data.ctaLabel}</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 stroke-[2.5]"></i>
+                    </button>
+                </div>
+            `;
+
+            if (window.lucide) lucide.createIcons();
+        }
+
+        /**
+         * Controle do Menu Mobile (Drawer)
+         */
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-drawer');
+            if (!drawer) return;
+            const isHidden = drawer.classList.contains('hidden');
+            if (isHidden) {
+                drawer.classList.remove('hidden');
+                drawer.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.classList.add('hidden');
+                drawer.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+        }
+
+        /**
+         * Controle do Modal de Aula Experimental (RF03)
+         */
+        function openBookingModal(modality) {
+            const modal = document.getElementById('booking-modal');
+            const select = document.getElementById('modal-modality');
+            if (!modal) return;
+
+            if (select && modality) {
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value.toLowerCase() === modality.toLowerCase()) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Fechar modal ao clicar fora do card
+        document.getElementById('booking-modal')?.addEventListener('click', (e) => {
+            if (e.target.id === 'booking-modal') closeBookingModal();
+        });
+
+        /**
+         * Envio dos Formulários de Agendamento (Inline e Modal)
+         */
+        function handleBookingSubmit(event, source) {
+            event.preventDefault();
+            const name = document.getElementById(`${source}-name`)?.value.trim() || 'Visitante';
+            const modality = document.getElementById(`${source}-modality`)?.value || 'Musculação';
+
+            if (source === 'modal') {
+                closeBookingModal();
+            }
+            event.target.reset();
+
+            // Exibir Toast de confirmação e abrir canal oficial bio.site/maxphisical
+            showToast(
+                `Tudo certo, ${name}!`,
+                `Interesse registrado em ${modality}. Clique em "Abrir Bio" para concluir no nosso atendimento oficial.`
+            );
+        }
+
+        let toastTimeout;
+        function showToast(title, message) {
+            const toast = document.getElementById('toast');
+            const titleEl = document.getElementById('toast-title');
+            const msgEl = document.getElementById('toast-message');
+            if (!toast || !titleEl || !msgEl) return;
+
+            titleEl.textContent = title;
+            msgEl.textContent = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 8000);
+        }
+
+        /**
+         * Animações de Scroll Reveal (RNF01)
+         */
+        function initScrollReveal() {
+            const elements = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) {
+                elements.forEach(el => el.classList.add('visible'));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            elements.forEach(el => observer.observe(el));
+        }
+
+        /**
+         * Efeito de consolidação da Navbar ao rolar
+         */
+        function initNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('bg-obsidian/92', 'border-graphite', 'shadow-2xl');
+                    navbar.classList.remove('bg-obsidian/55', 'border-white/5');
+                } else {
+                    navbar.classList.remove('bg-obsidian/92', 'border-graphite', 'shadow-2xl');
+                    navbar.classList.add('bg-obsidian/55', 'border-white/5');
+                }
+            }, { passive: true });
+        }
+    </script>
+</body>
+</html>

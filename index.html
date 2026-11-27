@@ -210,11 +210,12 @@
 
                 <!-- Links de Navegação Desktop -->
                 <nav class="hidden lg:flex items-center gap-8" aria-label="Navegação Principal">
+                    <a href="#filosofia" class="text-sm font-medium text-silver hover:text-white transition-colors">A Max</a>
                     <a href="#modalidades" class="text-sm font-medium text-silver hover:text-white transition-colors">Modalidades</a>
-                    <a href="#filosofia" class="text-sm font-medium text-silver hover:text-white transition-colors">Filosofia</a>
+                    <a href="#comunidade" class="text-sm font-medium text-silver hover:text-white transition-colors">Comunidade</a>
                     <a href="#planos" class="text-sm font-medium text-silver hover:text-white transition-colors">Planos</a>
                     <a href="#horarios" class="text-sm font-medium text-silver hover:text-white transition-colors">Horários</a>
-                    <a href="#localizacao" class="text-sm font-medium text-silver hover:text-white transition-colors">Onde fica</a>
+                    <a href="#localizacao" class="text-sm font-medium text-silver hover:text-white transition-colors">Contato</a>
                 </nav>
 
                 <!-- CTA Pílula Desktop & Botão Menu Mobile -->
@@ -267,8 +268,9 @@
         </div>
 
         <nav class="flex flex-col gap-6 my-auto text-center">
+            <a href="#filosofia" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">A Max</a>
             <a href="#modalidades" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Modalidades</a>
-            <a href="#filosofia" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Filosofia</a>
+            <a href="#comunidade" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Comunidade</a>
             <a href="#horarios" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Horários</a>
             <a href="#planos" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Planos</a>
             <a href="#comunidade" onclick="toggleMobileMenu()" class="font-display text-3xl uppercase tracking-wide text-white hover:text-volt transition-colors">Comunidade</a>
@@ -508,6 +510,104 @@
         <!-- =========================================================
              SEÇÃO 9: CTA FINAL IMERSIVO + LOCALIZAÇÃO OFICIAL
              ========================================================= -->
+
+        <!-- SEÇÃO: MANIFESTO / IDENTIDADE -->
+        <section id="filosofia" class="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div class="absolute -left-24 top-1/3 w-96 h-96 rounded-full bg-volt/10 blur-[140px] pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                <div class="lg:col-span-6 reveal">
+                    <span class="inline-flex items-center gap-2 text-volt text-xs font-bold uppercase tracking-[0.25em] mb-4"><span class="w-8 h-[2px] bg-volt"></span> Nosso propósito</span>
+                    <h2 class="font-hero font-black uppercase text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6">MOVIMENTO QUE TRANSFORMA. <span class="text-volt">RESULTADOS QUE INSPIRAM.</span></h2>
+                    <p class="text-silver text-base sm:text-lg leading-relaxed mb-5">Na Max Phisical, acreditamos que cuidar do corpo também é cuidar da mente. Cada pessoa tem seu ritmo, seus objetivos e sua própria jornada.</p>
+                    <p class="text-silver leading-relaxed mb-7">Nosso espaço reúne musculação, Studio de Pilates e aulas de dança para diferentes fases da vida. O importante é encontrar o movimento que faz sentido para você e dar o primeiro passo.</p>
+                    <button type="button" onclick="openBookingModal('Musculação')" class="inline-flex items-center gap-3 bg-volt hover:bg-solar text-obsidian font-extrabold px-6 py-3.5 rounded-full shadow-volt-glow transition-all">Conheça a Max <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button>
+                </div>
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 reveal">
+                    <div class="rounded-3xl border border-graphite bg-carbon p-6 sm:p-8">
+                        <i data-lucide="dumbbell" class="w-8 h-8 text-volt mb-5"></i><h3 class="font-display text-xl sm:text-2xl uppercase font-bold mb-2">Treino</h3><p class="text-silver text-sm leading-relaxed">Espaço para desenvolver força, condicionamento e constância.</p>
+                    </div>
+                    <div class="rounded-3xl border border-graphite bg-carbon p-6 sm:p-8 mt-8">
+                        <i data-lucide="heart-pulse" class="w-8 h-8 text-volt mb-5"></i><h3 class="font-display text-xl sm:text-2xl uppercase font-bold mb-2">Bem-estar</h3><p class="text-silver text-sm leading-relaxed">Atividades que valorizam saúde, mobilidade e qualidade de vida.</p>
+                    </div>
+                    <div class="rounded-3xl border border-graphite bg-carbon p-6 sm:p-8 -mt-8">
+                        <i data-lucide="users" class="w-8 h-8 text-volt mb-5"></i><h3 class="font-display text-xl sm:text-2xl uppercase font-bold mb-2">Acolhimento</h3><p class="text-silver text-sm leading-relaxed">Um ambiente para treinar, evoluir e fazer parte de uma comunidade.</p>
+                    </div>
+                    <div class="rounded-3xl border border-graphite bg-carbon p-6 sm:p-8">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-volt mb-5"></i><h3 class="font-display text-xl sm:text-2xl uppercase font-bold mb-2">Evolução</h3><p class="text-silver text-sm leading-relaxed">Pequenos passos, feitos com regularidade, constroem grandes mudanças.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: MODALIDADES -->
+        <section id="modalidades" class="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-carbon/35 overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-volt/10 rounded-full blur-[140px] pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto relative">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10 reveal">
+                    <div><span class="text-volt text-xs font-bold uppercase tracking-[0.25em]">Encontre seu movimento</span><h2 class="font-hero font-black uppercase text-3xl sm:text-4xl lg:text-5xl mt-3">ESCOLHA SUA <span class="text-volt">MODALIDADE</span></h2></div>
+                    <p class="text-silver max-w-lg text-sm sm:text-base">Diferentes caminhos para cuidar de você. Conheça as atividades da Max Phisical e consulte nossa equipe sobre a melhor opção para sua rotina.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <article class="group relative min-h-[330px] rounded-3xl overflow-hidden border border-graphite bg-obsidian reveal">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85" alt="Treino de musculação" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/45 to-transparent"></div>
+                        <div class="relative min-h-[330px] flex flex-col justify-end p-7"><span class="text-volt text-xs font-bold uppercase tracking-widest">Força e condicionamento</span><h3 class="font-display text-3xl uppercase font-bold mt-2 mb-3">Musculação</h3><p class="text-silver text-sm mb-5">Treinos para desenvolver força, resistência e evolução no seu ritmo.</p><button onclick="openBookingModal('Musculação')" class="self-start text-volt font-bold text-sm inline-flex items-center gap-2">Tenho interesse <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button></div>
+                    </article>
+                    <article class="group relative min-h-[330px] rounded-3xl overflow-hidden border border-graphite bg-obsidian reveal">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85" alt="Prática de Pilates" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/45 to-transparent"></div>
+                        <div class="relative min-h-[330px] flex flex-col justify-end p-7"><span class="text-volt text-xs font-bold uppercase tracking-widest">Consciência corporal</span><h3 class="font-display text-3xl uppercase font-bold mt-2 mb-3">Studio de Pilates</h3><p class="text-silver text-sm mb-5">Uma prática que combina controle, mobilidade, força e respiração.</p><button onclick="openBookingModal('Studio Pilates')" class="self-start text-volt font-bold text-sm inline-flex items-center gap-2">Tenho interesse <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button></div>
+                    </article>
+                    <article class="group relative min-h-[330px] rounded-3xl overflow-hidden border border-graphite bg-obsidian reveal">
+                        <img src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=900&q=85" alt="Aula de dança" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/45 to-transparent"></div>
+                        <div class="relative min-h-[330px] flex flex-col justify-end p-7"><span class="text-volt text-xs font-bold uppercase tracking-widest">Ritmo e energia</span><h3 class="font-display text-3xl uppercase font-bold mt-2 mb-3">Dança</h3><p class="text-silver text-sm mb-5">Movimente o corpo, divirta-se e compartilhe a energia das aulas.</p><button onclick="openBookingModal('Aulas de Dança')" class="self-start text-volt font-bold text-sm inline-flex items-center gap-2">Tenho interesse <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: COMUNIDADE E AVALIAÇÕES -->
+        <section id="comunidade" class="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-10 reveal"><span class="text-volt text-xs font-bold uppercase tracking-[0.25em]">Gente que faz parte</span><h2 class="font-hero font-black uppercase text-3xl sm:text-4xl lg:text-5xl mt-3 mb-4">A FORÇA ESTÁ NA <span class="text-volt">COMUNIDADE</span></h2><p class="text-silver">Mais do que um lugar para treinar: um espaço de convivência, incentivo e evolução compartilhada.</p></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="md:col-span-2 rounded-3xl min-h-[260px] p-8 sm:p-10 bg-gradient-to-br from-carbon to-navy/50 border border-graphite flex flex-col justify-between reveal"><i data-lucide="quote" class="w-9 h-9 text-volt"></i><p class="font-display font-bold uppercase text-2xl sm:text-3xl leading-snug mt-6">“Um bom lugar para treinar, bom ambiente, bastante aparelhos e bem aconchegante.”</p><span class="text-silver text-sm mt-5">— Cesao Prado · Avaliação Google</span></div>
+                    <div class="rounded-3xl p-8 bg-carbon border border-graphite flex flex-col justify-between reveal"><div><div class="flex gap-1 text-volt mb-5"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div><p class="text-white text-lg font-semibold leading-relaxed">“Excelente academia, recomendo. Bons profissionais e atenciosos.”</p></div><span class="text-silver text-sm mt-6">— Eliana Ferreira · Avaliação Google</span></div>
+                </div>
+                <div class="mt-7 text-center reveal"><a href="https://www.instagram.com/maxphisical/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-volt font-bold hover:text-white transition-colors">Acompanhe a Max no Instagram <i data-lucide="instagram" class="w-4 h-4"></i></a></div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: PLANOS / MATRÍCULA -->
+        <section id="planos" class="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-carbon/35 overflow-hidden">
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="max-w-3xl mx-auto mb-10 reveal"><span class="text-volt text-xs font-bold uppercase tracking-[0.25em]">Sua próxima conquista começa aqui</span><h2 class="font-hero font-black uppercase text-3xl sm:text-4xl lg:text-5xl mt-3 mb-4">SEU OBJETIVO. <span class="text-volt">SEU PLANO.</span></h2><p class="text-silver">Consulte as opções de matrícula e encontre a modalidade ideal para você. Nossa equipe apresenta as condições atualizadas diretamente no atendimento.</p></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-left">
+                    <div class="rounded-3xl p-7 sm:p-8 bg-obsidian border border-graphite reveal"><i data-lucide="calendar-days" class="w-8 h-8 text-volt mb-5"></i><h3 class="font-display text-2xl uppercase font-bold mb-3">Mensal</h3><p class="text-silver text-sm leading-relaxed mb-6">Flexibilidade para começar e conhecer a rotina de treinos.</p><button onclick="openBookingModal('Musculação')" class="text-volt font-bold text-sm">Consultar condições →</button></div>
+                    <div class="rounded-3xl p-7 sm:p-8 bg-obsidian border border-volt/60 shadow-volt-glow reveal"><i data-lucide="award" class="w-8 h-8 text-volt mb-5"></i><span class="text-volt text-xs font-bold uppercase tracking-widest">Converse com a equipe</span><h3 class="font-display text-2xl uppercase font-bold mt-2 mb-3">Planos especiais</h3><p class="text-silver text-sm leading-relaxed mb-6">Consulte opções e condições para seu objetivo e frequência.</p><button onclick="openBookingModal('Plano Completo / Combo')" class="text-volt font-bold text-sm">Quero saber mais →</button></div>
+                    <div class="rounded-3xl p-7 sm:p-8 bg-obsidian border border-graphite reveal"><i data-lucide="users" class="w-8 h-8 text-volt mb-5"></i><h3 class="font-display text-2xl uppercase font-bold mb-3">Pilates e dança</h3><p class="text-silver text-sm leading-relaxed mb-6">Consulte disponibilidade, horários e condições de cada atividade.</p><button onclick="openBookingModal('Studio Pilates')" class="text-volt font-bold text-sm">Consultar turmas →</button></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: HORÁRIOS DE FUNCIONAMENTO -->
+        <section id="horarios" class="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 border-y border-graphite/70">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5 reveal"><span class="text-volt text-xs font-bold uppercase tracking-[0.25em]">Organize sua rotina</span><h2 class="font-hero font-black uppercase text-3xl sm:text-4xl lg:text-5xl mt-3 mb-5">TREINO QUE CABE <span class="text-volt">NO SEU DIA.</span></h2><p class="text-silver leading-relaxed">A academia funciona de segunda a sábado. Confira os horários de funcionamento e consulte a equipe sobre a grade específica das aulas de Pilates e dança.</p></div>
+                <div class="lg:col-span-7 rounded-3xl bg-carbon border border-graphite p-6 sm:p-8 reveal">
+                    <div class="flex items-center justify-between gap-4 border-b border-graphite pb-4 mb-4"><span class="font-display font-bold uppercase text-lg">Funcionamento</span><span class="text-volt text-xs font-bold uppercase tracking-widest">Unidade Centro</span></div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between gap-4"><span class="text-silver">Segunda a quinta</span><strong class="text-white">06h – 21h</strong></div>
+                        <div class="flex justify-between gap-4"><span class="text-silver">Sexta-feira</span><strong class="text-white">06h – 20h</strong></div>
+                        <div class="flex justify-between gap-4"><span class="text-silver">Sábado</span><strong class="text-white">07h – 13h30</strong></div>
+                        <div class="flex justify-between gap-4"><span class="text-silver">Domingo</span><strong class="text-white">Fechado</strong></div>
+                    </div>
+                    <p class="text-xs text-silver/80 mt-6 pt-4 border-t border-graphite">Os horários acima são de funcionamento da academia. Aulas com horários agendados devem ser consultadas diretamente com a equipe.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="localizacao" class="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-graphite/60 overflow-hidden">
             <div class="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-volt/10 blur-[150px] pointer-events-none"></div>
 
